@@ -1,0 +1,19 @@
+%icons {
+  border: 2px solid white;
+  border-radius: 90px;
+  padding: 8px 10px;
+  margin: 3px;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0 5px 15px -5px #000070;
+
+  &:hover{
+      color: #00b1f7;
+      transition: ease-out 1s;
+      transform: scale(1.2);
+  }
+}
+
+.fab{
+  @extend %icons;
+}

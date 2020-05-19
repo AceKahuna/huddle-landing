@@ -1,0 +1,191 @@
+@import 'mediaqueries';//very important
+@import 'variables';
+@import 'icons';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{  
+    max-width:  100%;
+    background-color: $primary-color;
+    background-image: url(/images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(phone){
+        background-image: url(/images/bg-mobile.svg);
+        background-repeat: no-repeat;
+    }
+    
+/*Header section*/
+header{
+
+    @include responsive(phone){
+        max-width: 100%;
+    }
+    
+    img{
+        padding: 10px;
+        margin-top: 20px;
+        margin: 20px;
+    }
+}
+
+/*main content*/
+.main-content{
+    display: flex;
+    flex-direction:  column;
+    padding: 25px;
+    margin-bottom: 0;
+   
+/*center*/
+
+    .center{
+        display: flex;
+        flex-direction: row wrap;
+        align-items: flex-start;
+        max-width: 100%;
+        margin: 10px;
+        justify-content: space-between;
+
+        
+        @include responsive (tab-port){
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            flex-basis: 80%;
+        }
+
+        @include responsive (tab-land){
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            flex-basis: 80%;
+        }
+  
+        @include responsive(bg-desktop){
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            flex-basis: 80%;
+        }
+
+        @include responsive (phone){
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            flex-basis: 80%;
+        }
+
+/* mockup image*/
+.mockup-image{
+    max-width: 100%;
+    margin: 35px;
+
+    img{
+        @include responsive(phone){
+            max-width: 100%;
+        }    
+        @include responsive (tab-port){
+            max-width: 100%;
+        }
+        @include responsive (tab-land){
+            max-width: 100%;
+        }   
+    }
+    }
+/* info*/
+.info{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+
+    h1{
+        font-family: $heading;
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 20px;
+
+        @include responsive (phone){
+            font-size: 12px;
+        }
+
+        @include responsive (tab-land){
+            font-size: 20px;
+        }
+    }
+    
+    p{
+        font-family: $para;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    button{
+        padding: 10px;
+        width: 250px;
+        border: none;
+        border-radius: 20px;
+        color: $primary-color;
+        box-shadow: 0 5px 15px -5px #000070;
+
+        @include responsive (tab-port){
+            align-self: center;
+        }
+
+        @include responsive (phone){
+            align-self: center;
+        }
+    }
+    button:hover{
+        background-color: aquamarine;
+        transition: ease-in-out 1s;
+        transform: scale(1.1);
+    }
+
+    @include responsive(phone){
+        text-align: center;
+        font-size: 10px;
+    }
+}
+} 
+}
+
+
+//footer
+footer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+
+    .icons{
+        align-self: flex-end;
+        margin-bottom: 20px;
+
+        @include responsive (tab-land){
+            align-self: flex-end;
+        }
+        @include responsive (phone){
+            align-self: center;
+        }
+    }  
+
+    p{
+        text-align: center;
+    }
+
+    a{
+            text-decoration: none;
+            color: goldenrod;
+        }
+}
+}
