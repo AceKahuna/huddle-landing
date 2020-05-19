@@ -48,6 +48,12 @@ body {
   /*main content*/
 }
 
+@media only screen and (max-width: 900px) {
+  .main {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .main {
     background-image: url(/images/bg-mobile.svg);
@@ -105,14 +111,14 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-preferred-size: 80%;
-        flex-basis: 80%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
@@ -121,14 +127,14 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-preferred-size: 80%;
-        flex-basis: 80%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
@@ -153,12 +159,6 @@ body {
   margin: 35px;
 }
 
-@media only screen and (max-width: 600px) {
-  .main .main-content .center .mockup-image img {
-    max-width: 100%;
-  }
-}
-
 @media only screen and (max-width: 900px) {
   .main .main-content .center .mockup-image img {
     max-width: 100%;
@@ -166,6 +166,12 @@ body {
 }
 
 @media only screen and (max-width: 1400px) {
+  .main .main-content .center .mockup-image img {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .main .main-content .center .mockup-image img {
     max-width: 100%;
   }
@@ -206,6 +212,18 @@ body {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 20px;
   padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .main .main-content .center .info p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .main .main-content .center .info p {
+    font-size: 16px;
+  }
 }
 
 .main .main-content .center .info button {

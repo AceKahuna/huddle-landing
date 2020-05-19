@@ -20,6 +20,10 @@ body{
     display: flex;
     flex-direction: column;
 
+    @include responsive (tab-port){
+        width: 100%;
+    }
+
     @include responsive(phone){
         background-image: url(/images/bg-mobile.svg);
         background-repeat: no-repeat;
@@ -59,23 +63,23 @@ header{
         
         @include responsive (tab-port){
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             flex-direction: row;
-            flex-basis: 80%;
+            flex-basis: 100%;
         }
 
         @include responsive (tab-land){
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             flex-direction: row;
-            flex-basis: 80%;
+            flex-basis: 100%;
         }
   
         @include responsive(bg-desktop){
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            flex-basis: 80%;
+            flex-basis: 100%;
         }
 
         @include responsive (phone){
@@ -91,15 +95,21 @@ header{
     margin: 35px;
 
     img{
-        @include responsive(phone){
-            max-width: 100%;
-        }    
+
         @include responsive (tab-port){
             max-width: 100%;
         }
         @include responsive (tab-land){
             max-width: 100%;
-        }   
+        } 
+
+        @include responsive(bg-desktop){
+            width: 100%;
+        }
+        @include responsive(phone){
+            max-width: 100%;
+        }    
+         
     }
     }
 /* info*/
@@ -128,6 +138,14 @@ header{
         font-family: $para;
         margin-bottom: 20px;
         padding: 0;
+
+        @include responsive (phone){
+            font-size: 12px;
+        }
+
+        @include responsive (tab-land){
+            font-size: 16px;
+        }
     }
     button{
         padding: 10px;
