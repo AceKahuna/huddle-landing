@@ -135,8 +135,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-preferred-size: 80%;
-        flex-basis: 80%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
@@ -157,7 +157,7 @@ body {
 }
 
 .main .main-content .center .mockup-image {
-  max-width: 100%;
+  width: 100%;
   margin: 20px;
 }
 
