@@ -67,14 +67,14 @@ header{
             display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
-            flex-basis: 100%;
+            flex-basis: 80%;
         }
 
         @include responsive (tab-land){
             display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
-            flex-basis: 100%;
+            flex-basis: 80%;
         }
   
         @include responsive(bg-desktop){
@@ -94,7 +94,7 @@ header{
 /* mockup image*/
 .mockup-image{
     max-width: 100%;
-    margin: 35px;
+    margin: 20px;
 
     img{
 
@@ -106,12 +106,13 @@ header{
         } 
 
         @include responsive(bg-desktop){
-            width: 100%;
+            width:  100%;
         }
         @include responsive(phone){
-            max-width: 100%;
-        }    
-         
+            width: 100%;
+            margin: 0;
+            padding: 20px;
+        }        
     }
     }
 /* info*/
@@ -120,7 +121,7 @@ header{
     flex-direction: column;
     padding: 20px;
     margin: 10px;
-
+    
     h1{
         font-family: $heading;
         font-weight: 700;
